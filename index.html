@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBOTE — World Lore & Power System</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Glow BG -->
+  <div class="bg-glow"></div>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="nav__logo">
+      <span class="dot"></span>
+      <span>TBOTE</span>
+      <small>World Lore</small>
+    </div>
+
+    <nav class="nav__links">
+      <a href="#overview">ภาพรวม</a>
+      <a href="#core">แกนพลัง</a>
+      <a href="#ranks">ระดับพลัง</a>
+      <a href="#races">เผ่า</a>
+      <a href="#orgs">องค์กร</a>
+      <a href="#combat">ระบบต่อสู้</a>
+      <a href="#skills">สายพลัง</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button id="toggleTheme" class="btn ghost">Theme</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="overview">
+    <div class="hero__content reveal">
+      <h1>
+        The Beginning of the End
+        <span class="grad">Lore & Power System</span>
+      </h1>
+
+      <p>
+        เว็บไซต์นี้รวบรวมข้อมูลระบบพลังของจักรวาล TBOTE แบบละเอียด
+        ตั้งแต่ “แกนพลัง”, “ระดับพลัง”, “เผ่า”, “องค์กร” ไปจนถึงระบบต่อสู้ที่สามารถเอาไปทำ Roleplay ได้จริง
+      </p>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <h3>7+</h3>
+          <p>หมวดข้อมูลหลัก</p>
+        </div>
+        <div class="stat">
+          <h3>20+</h3>
+          <p>แนวคิดระบบต่อสู้</p>
+        </div>
+        <div class="stat">
+          <h3>∞</h3>
+          <p>ต่อยอดได้ไม่จำกัด</p>
+        </div>
+      </div>
+
+      <div class="hero__search">
+        <input id="searchInput" type="text" placeholder="ค้นหา: แกนพลัง / เผ่า / สายพลัง / องค์กร..." />
+        <button id="searchBtn" class="btn">Search</button>
+      </div>
+
+      <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <div class="hero__panel reveal">
+      <div class="panel-card">
+        <h2>Quick Lore</h2>
+        <p>
+          โลก TBOTE ถูกขับเคลื่อนด้วย “แกนพลัง” ที่ทำหน้าที่เหมือนหัวใจของผู้ใช้พลัง
+          ยิ่งแกนแข็งแรง ยิ่งควบคุมพลังได้ลึกและเสถียร
+        </p>
+
+        <div class="tags">
+          <span>Core</span>
+          <span>Mana</span>
+          <span>Awakening</span>
+          <span>Bloodline</span>
+        </div>
+      </div>
+
+      <div class="panel-card soft">
+        <h2>RP Ready</h2>
+        <p>
+          เหมาะสำหรับเอาไปสร้าง Discord Roleplay / Web RPG / ระบบบอท
+          โดยมีหมวด “Combat” และ “Status” ให้ใช้จริง
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="container">
+
+    <!-- Core System -->
+    <section id="core" class="section reveal" data-title="แกนพลัง">
+      <div class="section__head">
+        <h2>แกนพลัง (Core)</h2>
+        <p>แกนพลังคือ “ศูนย์กลางของพลัง” ทำหน้าที่สร้าง เก็บ และแปลงพลังภายใน</p>
+      </div>
+
+      <div class="grid">
+        <article class="card searchable">
+          <h3>1) แกนพื้นฐาน (Natural Core)</h3>
+          <p>
+            แกนพลังที่เกิดขึ้นตามธรรมชาติเมื่อมนุษย์/เผ่าเริ่ม “ตื่นพลัง”
+            เป็นแกนที่เสถียรที่สุด แต่เติบโตช้า
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>2) แกนกลายพันธุ์ (Mutated Core)</h3>
+          <p>
+            เกิดจากเหตุการณ์พิเศษ เช่น พลังต้องห้าม, การทดลอง, การปนเปื้อนพลัง
+            เติบโตเร็ว แต่เสี่ยง “แตกแกน” หรือสูญเสียสติ
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>3) แกนเลือด (Bloodline Core)</h3>
+          <p>
+            แกนที่ถูกส่งต่อทางสายเลือดของตระกูลพิเศษ
+            มักมี “ความสามารถเฉพาะ” เช่น ไฟดำ, เวลา, มิติ
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>4) แกนเทียม (Artificial Core)</h3>
+          <p>
+            แกนที่ถูกสร้างขึ้นด้วยเทคโนโลยี/พิธีกรรม
+            ใช้แทนแกนจริงได้ แต่ต้องใช้ “ตัวช่วยเสริม” ตลอดเวลา
+          </p>
+        </article>
+      </div>
+
+      <div class="callout">
+        <h4>กฎสำคัญของแกนพลัง</h4>
+        <ul>
+          <li>แกนพลังมี “ความจุ” และ “ความเสถียร”</li>
+          <li>การฝืนใช้เกินขีดจำกัด → แกนร้าว → แตกแกน → ตาย/พิการ</li>
+          <li>แกนพลังสามารถ “วิวัฒน์” ได้เมื่อผ่านจุดตื่นรู้</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ranks -->
+    <section id="ranks" class="section reveal" data-title="ระดับพลัง">
+      <div class="section__head">
+        <h2>ระดับพลัง (Power Ranks)</h2>
+        <p>ระบบยศที่เอาไปใช้ใน Roleplay ได้จริง (ยืดหยุ่นปรับเพิ่มได้)</p>
+      </div>
+
+      <div class="accordion">
+        <button class="acc-item searchable">
+          <span>F → ผู้ตื่นพลังขั้นต้น</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>เพิ่งเริ่มมีแกนพลัง ใช้พลังได้แค่พื้นฐาน (เสริมแรงกาย/ปล่อยพลังเล็กน้อย)</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>E → ผู้ใช้พลังทั่วไป</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>เริ่มสร้างทักษะได้ ใช้พลังต่อเนื่องได้มากขึ้น แต่ยังไม่เสถียร</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>D → นักสู้พลัง</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>สามารถต่อสู้จริงได้ ใช้สกิลได้หลายแบบ และเริ่มมี “สายพลัง” ชัดเจน</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>C → ผู้เชี่ยวชาญ</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>เริ่มมีเทคนิคขั้นสูง เช่น การกดแกน, การเสริมแกน, การสร้างสนามพลัง</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>B → Elite</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>สามารถทำลายพื้นที่ขนาดใหญ่ มีสกิลเอกลักษณ์ระดับสูง</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>A → Commander</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>ระดับที่องค์กรต่างๆต้องการตัว สามารถคุมสนามรบได้คนเดียว</p>
+        </div>
+
+        <button class="acc-item searchable">
+          <span>S → Legend</span>
+          <i>+</i>
+        </button>
+        <div class="acc-panel">
+          <p>ระดับตำนาน พลังเหนือกฎของโลก มีอิทธิพลต่อยุคสมัย</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Races -->
+    <section id="races" class="section reveal" data-title="เผ่า">
+      <div class="section__head">
+        <h2>เผ่า (Races)</h2>
+        <p>โลก TBOTE สามารถมีหลายเผ่า โดยแต่ละเผ่าจะมีแกนพลังและข้อจำกัดต่างกัน</p>
+      </div>
+
+      <div class="grid">
+        <article class="card searchable">
+          <h3>มนุษย์ (Human)</h3>
+          <p>
+            สมดุลที่สุด พัฒนาได้ทุกสายพลัง
+            แต่ต้องใช้เวลาในการฝึกและตื่นรู้
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>อสูร/ครึ่งอสูร (Demon / Half)</h3>
+          <p>
+            มีแกนพลังดิบสูงมาก แข็งแรง
+            แต่เสี่ยง “พลังกลืนจิต” หากควบคุมไม่ได้
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>เผ่าจิตวิญญาณ (Spiritborn)</h3>
+          <p>
+            เชื่อมต่อพลังมิติ/ธรรมชาติได้ง่าย
+            แต่พลังอาจลดลงเมื่ออยู่ในพื้นที่ปิดตาย
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>เผ่าเทียม (Artificial Race)</h3>
+          <p>
+            ถูกสร้างด้วยการทดลอง มีแกนเทียม
+            พลังพุ่งเร็ว แต่มี “อายุแกน” จำกัด
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Orgs -->
+    <section id="orgs" class="section reveal" data-title="องค์กร">
+      <div class="section__head">
+        <h2>องค์กรหลัก (Organizations)</h2>
+        <p>โครงสร้างโลกที่เหมาะมากสำหรับทำ Roleplay และ Campaign</p>
+      </div>
+
+      <div class="grid">
+        <article class="card searchable">
+          <h3>1) สมาพันธ์นักล่า (Hunter Federation)</h3>
+          <p>
+            หน่วยงานที่จัดอันดับนักสู้ รับเควส กำจัดภัยคุกคาม
+            มีระบบยศ, เงินรางวัล, และพื้นที่ควบคุม
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>2) สถาบันฝึกแกน (Core Academy)</h3>
+          <p>
+            โรงเรียน/สถาบันที่ฝึกผู้ตื่นพลัง
+            มีการสอบ, การประเมินแกน, และการฝึกสนามจริง
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>3) องค์กรวิจัยแกน (Core Research Lab)</h3>
+          <p>
+            ศึกษาแกนเทียม, การวิวัฒน์แกน, และพลังต้องห้าม
+            เป็นแหล่งกำเนิดเหตุการณ์ดาร์คหลายอย่าง
+          </p>
+        </article>
+
+        <article class="card searchable">
+          <h3>4) กลุ่มต้องห้าม (Forbidden Cult)</h3>
+          <p>
+            กลุ่มที่เชื่อว่าการ “แตกแกน” คือทางสู่พลังสูงสุด
+            ใช้พิธีกรรมและการสังเวย
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Combat -->
+    <section id="combat" class="section reveal" data-title="ระบบต่อสู้">
+      <div class="section__head">
+        <h2>ระบบต่อสู้ (Combat System)</h2>
+        <p>ระบบต่อสู้ที่คุณสามารถเอาไปใช้กับ Discord Dice / D&D ได้ทันที</p>
+      </div>
+
+      <div class="grid">
+        <article class="card searchable">
+          <h3>ค่าสเตตัสพื้นฐาน</h3>
+          <ul>
+            <li>STR (พลังโจมตี)</li>
+            <li>AGI (ความเร็ว/หลบ)</li>
+            <li>VIT (ความทนทาน)</li>
+            <li>INT (ควบคุมพลัง)</li>
+            <li>CORE (ความจุแกน)</li>
+          </ul>
+        </article>
+
+        <article class="card searchable">
+          <h3>สถานะสำคัญ</h3>
+          <ul>
+            <li>Core Burn (แกนไหม้)</li>
+            <li>Core Crack (แกนร้าว)</li>
+            <li>Mana Poison (พิษพลัง)</li>
+            <li>Overdrive (โอเวอร์ไดรฟ์)</li>
+          </ul>
+        </article>
+
+        <article class="card searchable">
+          <h3>แนวคิดการต่อสู้</h3>
+          <ul>
+            <li>พลังไม่ใช่ทุกอย่าง → “เทคนิค” สำคัญกว่า</li>
+            <li>ผู้ชนะมักเป็นคนที่คุมแกนได้ดีที่สุด</li>
+            <li>การแตกแกนเป็นความเสี่ยงระดับชีวิต</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section reveal" data-title="สายพลัง">
+      <div class="section__head">
+        <h2>สายพลัง (Power Paths)</h2>
+        <p>สายพลังคือแนวทางการใช้แกนพลังที่แตกต่างกัน</p>
+      </div>
+
+      <div class="grid">
+        <article class="card searchable">
+          <h3>สายเสริมร่าง (Body Reinforcement)</h3>
+          <p>เสริมกล้ามเนื้อ กระดูก ประสาท เพิ่มความเร็วและพลังโจมตี</p>
+        </article>
+
+        <article class="card searchable">
+          <h3>สายธาตุ (Elemental)</h3>
+          <p>ไฟ น้ำ ลม ดิน น้ำแข็ง สายฟ้า ฯลฯ ใช้คุมสนามรบ</p>
+        </article>
+
+        <article class="card searchable">
+          <h3>สายมิติ (Spatial)</h3>
+          <p>บิดมิติ เปิดช่องว่าง วาร์ป ตัดพื้นที่ เป็นสายที่หายาก</p>
+        </article>
+
+        <article class="card searchable">
+          <h3>สายจิต (Mental)</h3>
+          <p>ควบคุมจิต อ่านความคิด สร้างภาพลวงตา หรือโจมตีจิตวิญญาณ</p>
+        </article>
+
+        <article class="card searchable">
+          <h3>สายต้องห้าม (Forbidden)</h3>
+          <p>ใช้พลังแลกกับอายุขัย สติ หรือร่างกาย มักเกิดจากพิธีกรรม</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        TBOTE Lore Website — Made for Roleplay & Worldbuilding
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
